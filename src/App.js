@@ -1,14 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import Login from './Login/Login'
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./components/pages/Home";
+import Contact from "./components/pages/Contact";
+import Service from "./components/pages/Services";
+import Facebook from "./components/pages/Facebook";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img style={{ height: 100 }} src={logo} className="App-logo" alt="logo" />
-        <Login/>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home/>} exact />
+          <Route path="contact" element={<Contact/>} exact />
+          <Route path="services" element={<Service/>} exact />
+          <Route path="facebook" element={<Facebook/>} exact />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

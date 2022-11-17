@@ -1,3 +1,8 @@
+* {
+  margin-top: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,12 +10,76 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-  background-repeat: no-repeat;
+  background-color: #fff;
+  /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  background-repeat: no-repeat; */
   height: 100vh;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav {
+  background-color: blue;
+}
+
+ul {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li {
+  display: inline;
+  padding: 2rem;
+  padding-top: 10px;
+}
+
+li {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.logo {
+  max-height: 50px;
+  margin: 10px 0px 10px 15px;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: larger;
+  padding-left: 10px;
+}
+
+.facebook {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  font: optional;
+  text-align: center;
+}
+
+.Facebooklogo {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  /* width: 500px; */
+  text-align: left;
+  float: left;
+  padding-left: 10rem;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  box-sizing: border-box;
+  width: 400px;
 }
