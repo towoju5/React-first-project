@@ -7,6 +7,12 @@ function Login() {
   const [password, setpassword] = useState("");
   function process(e) {
     e.preventDefault();
+
+    // firstly disable login button on click
+    var $loginBtn = document.getElementById('loginBtn')
+    $loginBtn.setAttribute('disabled', true)
+
+
     var formdata = new FormData();
     formdata.append("email", "iamtowoju@yahoo.com");
     formdata.append("password", "adedayo201");
@@ -26,6 +32,7 @@ function Login() {
         } else {
           swal("Opps we hit a snag", "Invalid Login details", "error");
         }
+        $loginBtn.setAttribute('disabled', false)
       })
       .catch((error) => console.log("error", error));
   }
@@ -53,7 +60,7 @@ function Login() {
             onChange={(e) => setpassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" id="loginBtn" className="btn btn-primary">
           Submit
         </button>
       </form>
